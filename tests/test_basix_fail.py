@@ -6,13 +6,14 @@ import Pyxsim
 from Pyxsim import testers
 from pathlib import Path
 
-def test_template_pass(level, capfd):
+@pytest.mark.xfail(reason="Expected fail", strict=True)
+def test_basix_fail(level, capfd):
 
     # Might want to pytest.skip if level == "smoke"
 
-    binary = Path(__file__).parent / "test_template_pass" / "bin" / "test_template_pass.xe"
+    binary = Path(__file__).parent / "test_basix_fail" / "bin" / "test_basix_fail.xe"
 
-    expect_file = Path(__file__).parent / "test_template_pass" / "pass.expect"
+    expect_file = Path(__file__).parent / "test_basix_fail" / "pass.expect"
 
     tester = testers.ComparisonTester(open(expect_file), regexp=True)
 
@@ -30,4 +31,6 @@ def test_template_pass(level, capfd):
         tester=tester,
         capfd=capfd,
         clean_before_build=False)
+
+    assert result
 

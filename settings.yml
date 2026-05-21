@@ -1,22 +1,22 @@
 # This file relates to internal XMOS infrastructure and should be ignored by external users
 ---
-lib_name: lib_template
+lib_name: lib_basix
 project: '{{lib_name}}'
-title: '{{lib_name}}: Template library'
+title: '{{lib_name}}: Basix library'
 version: 1.0.0
 
 documentation:
   exclude_patterns_path: doc/exclude_patterns.inc
-  root_doc: doc/rst/lib_template.rst
+  root_doc: doc/rst/lib_basix.rst
   linkcheck_ignore_regex: ['']
   latex_toc_depth: 3
   latex_secnum_depth: 3
   cognidox_part_number: XM-XXXXXX-UG
   doxygen_projects:
-    lib_template:
+    lib_basix:
       doxyfile_path: doc/Doxyfile.inc
   pdfs:
-    doc/rst/lib_template.rst:
+    doc/rst/lib_basix.rst:
       pdf_title: '{{title}}'
       pdf_filename: '{{lib_name}}_v{{version}}'
     README.rst:
