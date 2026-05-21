@@ -4,13 +4,13 @@
 #include <platform.h>
 #include <assert.h>
 #include <print.h>
-#include "template.h"
+#include "basix.h"
 
 int main()
 {
-    int mol = template_get_meaning_of_life();
+    int mol = basix_get_meaning_of_life();
 
-    assert(mol == TEMPLATE_MEANING_OF_LIFE - 1); // This should fail
+    assert(mol == BASIX_MEANING_OF_LIFE - 1); // This should fail
 
     printstr("PASS");
     return 0;

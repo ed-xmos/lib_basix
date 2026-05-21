@@ -1,5 +1,5 @@
 ##############################
-lib_template: Template library
+lib_basix: Basix library
 ##############################
 
 ************
@@ -12,25 +12,25 @@ Introduction text
 Usage
 *****
 
-``lib_template`` is intended to be used with the `XCommon CMake <https://www.xmos.com/file/xcommon-cmake-documentation/?version=latest>`_
+``lib_basix`` is intended to be used with the `XCommon CMake <https://www.xmos.com/file/xcommon-cmake-documentation/?version=latest>`_
 , the `XMOS` application build and dependency management system.
 
-To use this library in an application include ``lib_template`` in the application's ``APP_DEPENDENT_MODULES`` list in
+To use this library in an application include ``lib_basix`` in the application's ``APP_DEPENDENT_MODULES`` list in
 `CMakeLists.txt`, for example:
 
 .. code-block:: cmake
 
-    set(APP_DEPENDENT_MODULES "lib_template")
+    set(APP_DEPENDENT_MODULES "lib_basix")
 
 .. note:: Dependent modules should be pinned to release versions where possible, otherwise the
    latest commit on the `develop` branch will be used.  For further details on managing modules,
    pinning to a release version and other options, please see the page `xcommon-cmake Dependency Management <https://www.xmos.com/documentation/XM-015090-PC/html/doc/dependency_management.html>`_.
 
-All ``lib_template`` functions can be accessed via the ``template.h`` header file, for example:
+All ``lib_basix`` functions can be accessed via the ``basix.h`` header file, for example:
 
 .. code-block:: C
 
-    #include "template.h"
+    #include "basix.h"
 
 *********
 Section 3
@@ -66,14 +66,14 @@ Special attention should be paid to the section on
 The application is built using the `xcommon-cmake <https://www.xmos.com/file/xcommon-cmake-documentation/?version=latest>`_
 build system, which is provided with the XTC tools and is based on `CMake <https://cmake.org/>`_.
 
-The ``lib_template`` software ZIP package should be downloaded and extracted to a chosen working
+The ``lib_basix`` software ZIP package should be downloaded and extracted to a chosen working
 directory.
 
 To configure the build, the following commands should be run from an XTC command prompt:
 
 .. code-block:: bash
 
-    cd lib_template/examples/app_template
+    cd lib_basix/examples/app_basix
     cmake -G "Unix Makefiles" -B build
 
 If any dependencies are missing they will be retrieved automatically during this step.
@@ -85,7 +85,7 @@ The application binaries should then be built using ``xmake``:
     xmake -j -C build
 
 Binary artifacts (.xe files) will be generated under the appropriate subdirectories of the
-``app_template/bin`` directory — one for each supported build configuration.
+``app_basix/bin`` directory — one for each supported build configuration.
 
 For subsequent builds, the ``cmake`` step may be omitted.
 If ``CMakeLists.txt`` or other build files are modified, ``cmake`` will be re-run automatically
@@ -94,18 +94,18 @@ by ``xmake`` as needed.
 Running the example
 ===================
 
-From an XTC command prompt, the following command should be run from the ``examples/app_template``
+From an XTC command prompt, the following command should be run from the ``examples/app_basix``
 directory:
 
 .. code-block:: bash
 
-    xrun ./bin/app_template.xe
+    xrun ./bin/app_basix.xe
 
 Alternatively, the application can be programmed into flash memory for standalone execution:
 
 .. code-block:: bash
 
-   xflash ./bin/app_template.xe
+   xflash ./bin/app_basix.xe
 
 *************
 API Reference

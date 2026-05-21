@@ -2,5 +2,5 @@ cmake_minimum_required(VERSION 3.21)
 include($ENV{XMOS_CMAKE_PATH}/xcommon.cmake)
 project(tests)
 
-add_subdirectory(test_template_pass)
-add_subdirectory(test_template_fail)
+add_subdirectory(test_basix_pass)
+add_subdirectory(test_basix_fail)

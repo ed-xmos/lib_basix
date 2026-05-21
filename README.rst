@@ -1,13 +1,13 @@
 :orphan:
 
 ##############################
-lib_template: Template library
+lib_basix: Basix library
 ##############################
 
 :vendor: XMOS
 :version: 1.0.0
 :scope: General Use
-:description: A template for making XMOS libraries
+:description: A basix XMOS library
 :category: General Purpose
 :keywords:
 :devices: xcore-200, xcore.ai
@@ -36,7 +36,7 @@ Known issues
 Development repo
 ****************
 
-* `lib_template <https://www.github.com/xmos/lib_template>`_ (https://www.github.com/xmos/lib_template)
+* `lib_basix <https://www.github.com/xmos/lib_basix>`_ (https://www.github.com/xmos/lib_basix)
 
 **************
 Required tools
@@ -62,4 +62,4 @@ Support
 *******
 
 This package is supported by XMOS Ltd. Issues can be raised against the software at
-`www.xmos.com/support <https://www.xmos.com/support>`_ or using GitHub `issues <https://github.com/xmos/lib_template/issues>`_.
+`www.xmos.com/support <https://www.xmos.com/support>`_ or using GitHub `issues <https://github.com/xmos/lib_basix/issues>`_.
