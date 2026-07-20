@@ -16,15 +16,14 @@ lib_basix: Basix library
 Summary
 *******
 
-A brief description of the library goes here. This should be a single paragraph.
-This will be the summary that appears on the XMOS website.
+Provides some compatility between XC and C and missing items from XTC and xcore-400 tools.
 
 ********
 Features
 ********
 
-* A bullet-point list of features of the library goes here.
-* This should be a concise summary of the library's capabilities.
+* Basic print support (basix/print.h)
+* XC/C Compatibility (basix/xcccompat.h)
 
 ************
 Known issues
