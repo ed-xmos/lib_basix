@@ -1,3 +1,5 @@
+// Copyright 2026 XMOS LIMITED.
+// This Software is subject to the terms of the XMOS Public Licence: Version 1.
 /*************************************************************************
  *
  * XMOS print library
@@ -7,13 +9,6 @@
  *          +: Richard Osborne
  *
  *************************************************************************/
-/*
- * Copyright (c) 2006-2008 XMOS Ltd.
- *
- * Copyright Notice
- *
- *************************************************************************/
-
 #include <syscall.h>
 #include <limits.h>
 #include <string.h>

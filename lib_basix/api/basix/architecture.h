@@ -6,7 +6,10 @@
 
 #include <stdint.h>
 
+/** Reference timer frequency. An override must match the hardware configuration. */
+#ifndef BASIX_TIMER_HZ
 #define BASIX_TIMER_HZ 100000000U
+#endif
 
 #if defined(__cplusplus) || defined(__XC__)
 extern "C" {
@@ -19,7 +22,7 @@ void basix_trap(void);
 void basix_trap(void) __attribute__((noreturn));
 #endif
 
-/** Return the current 100 MHz reference-clock timestamp. */
+/** Return the current reference-clock timestamp. */
 uint32_t basix_time_now(void);
 
 /** Delay for the specified number of reference-clock ticks. */

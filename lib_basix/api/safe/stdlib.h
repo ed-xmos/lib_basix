@@ -1,3 +1,5 @@
+// Copyright 2026 XMOS LIMITED.
+// This Software is subject to the terms of the XMOS Public Licence: Version 1.
 #ifndef _xc_safe_stdlib_h_
 #define _xc_safe_stdlib_h_
 
