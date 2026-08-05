@@ -5,7 +5,9 @@ project(test_basix_pass)
 
 set(APP_INCLUDES src)
 
-set(APP_HW_TARGET               XK-EVK-XU316)
+if(NOT DEFINED APP_HW_TARGET)
+  set(APP_HW_TARGET XK-EVK-XU316)
+endif()
 
 set(APP_COMPILER_FLAGS          -O3 -Wall)
 

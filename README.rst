@@ -5,10 +5,10 @@ lib_basix: Basix library
 ##############################
 
 :vendor: XMOS
-:version: 1.0.0
+:version: 0.1.0
 :scope: General Use
-:description: A basix XMOS library
-:category: General Purpose
+:description: HAL and utility library
+:category: General purpose
 :keywords:
 :devices: xcore-200, xcore.ai
 
@@ -16,14 +16,17 @@ lib_basix: Basix library
 Summary
 *******
 
-Provides some compatility between XC and C and missing items from XTC and xcore-400 tools.
+Provides common C/XC utilities and a portability layer for XS and VX xcore architectures.
 
 ********
 Features
 ********
 
-* Basic print support (basix/print.h)
-* XC/C Compatibility (basix/xcccompat.h)
+* Portable assertion trap support
+* Portable reference timer and delay APIs
+* Basic print support via ``basix/print.h``
+* C/XC compatibility definitions via ``basix/xccompat.h``
+* HAL support across XS and VX architectures
 
 ************
 Known issues
@@ -47,8 +50,7 @@ Required tools
 Required libraries (dependencies)
 *********************************
 
-* `lib_logging <https://www.xmos.com/libraries/lib_logging>`_ (https://www.xmos.com/libraries/lib_logging)
-* `lib_xassert <https://www.xmos.com/libraries/lib_xassert>`_ (https://www.xmos.com/libraries/lib_xassert)
+* None
 
 *************************
 Related application notes

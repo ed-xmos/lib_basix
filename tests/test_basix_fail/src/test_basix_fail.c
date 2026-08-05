@@ -1,17 +1,12 @@
 // Copyright 2025 XMOS LIMITED.
 // This Software is subject to the terms of the XMOS Public Licence: Version 1.
 
-#include <platform.h>
-#include <assert.h>
-#include <print.h>
-#include "basix.h"
+#include <basix.h>
 
 int main()
 {
-    int mol = basix_get_meaning_of_life();
+    basix_trap();
 
-    assert(mol == BASIX_MEANING_OF_LIFE - 1); // This should fail
-
-    printstr("PASS");
+    printstr("PASS\n");
     return 0;
 }

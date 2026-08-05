@@ -10,7 +10,6 @@
  * particular purpose, or non-infringement except to the extent that these
  * disclaimers are held to be legally invalid under applicable law.
  *
- * Version: <version>
  */
 
 #ifndef _print_h_

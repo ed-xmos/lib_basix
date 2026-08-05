@@ -16,9 +16,9 @@
 
 #include <syscall.h>
 #include <limits.h>
+#include <string.h>
 
-#include <print.h>
-#include <safe/string.h>
+#include <basix/print.h>
 
 // Helper functions
 static void reverse_array(char buf[], unsigned size);
@@ -27,14 +27,14 @@ static const char newline[1] = {'\n'};
 
 int printchar(char value)
 {
-  unsigned char tmp[1];
+  char tmp[1];
   tmp[0] = value;
   return _write(FD_STDOUT, tmp, 1);
 }
 
 int printcharln(char value)
 {
-  unsigned char tmp[2];
+  char tmp[2];
   tmp[0] = value;
   tmp[1] = '\n';
   return _write(FD_STDOUT, tmp, 2);
@@ -161,13 +161,13 @@ int printbinln(unsigned n)
   PRINTLN_BODY(printbin(n))
 }
 
-int printstr(const char (& alias s)[])
+int printstr(const char *s)
 {
-  int len = _safe_strlen(s);
+  int len = strlen(s);
   return _write(FD_STDOUT, s, len);
 }
 
-int printstrln(const char (& alias s)[])
+int printstrln(const char *s)
 {
   PRINTLN_BODY(printstr(s))
 }

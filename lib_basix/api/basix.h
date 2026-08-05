@@ -10,5 +10,6 @@
 
 #include "basix/xccompat.h"
 #include "basix/print.h"
+#include "basix/architecture.h"
 
 #endif // _BASIX_H_

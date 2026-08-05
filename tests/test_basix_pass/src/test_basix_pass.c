@@ -1,17 +1,17 @@
 // Copyright 2025 XMOS LIMITED.
 // This Software is subject to the terms of the XMOS Public Licence: Version 1.
 
-#include <platform.h>
-#include <assert.h>
-#include <print.h>
-#include "basix.h"
+#include <basix.h>
 
 int main()
 {
-    int mol = basix_get_meaning_of_life();
+    uint32_t before = basix_time_now();
+    basix_delay_ticks(10);
+    uint32_t elapsed = basix_time_now() - before;
 
-    assert(mol == BASIX_MEANING_OF_LIFE);
+    if (elapsed < 10 || BASIX_TIMER_HZ != 100000000U)
+        basix_trap();
 
-    printstr("PASS");
+    printstr("PASS\n");
     return 0;
 }
