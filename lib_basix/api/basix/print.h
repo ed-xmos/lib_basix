@@ -1,4 +1,4 @@
-// Copyright 2026 XMOS LIMITED.
+// Copyright 2008-2026 XMOS LIMITED.
 // This Software is subject to the terms of the XMOS Public Licence: Version 1.
 #ifndef _print_h_
 #define _print_h_
