@@ -1,12 +1,7 @@
-##############################
+########################
 lib_basix: Basix library
-##############################
+########################
 
-************
-Introduction
-************
-
-Introduction text
 
 *****
 Usage
@@ -31,22 +26,6 @@ All ``lib_basix`` functions can be accessed via the ``basix.h`` header file, for
 .. code-block:: C
 
     #include "basix.h"
-
-*********
-Section 3
-*********
-
-section 3 text
-
-Sub-section 1
-=============
-
-sub-section 1 text
-
-sub-sub-section 1
------------------
-
-sub-sub-section 1 text
 
 *******************
 Example application
