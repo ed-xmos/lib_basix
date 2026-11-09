@@ -32,7 +32,7 @@ def should_ignore_shim_test_for_target(collection_path, tests_dir):
 def pytest_ignore_collect(collection_path, config):
     return should_ignore_shim_test_for_target(
         collection_path,
-        Path(config.rootpath),
+        Path(__file__).resolve().parent,
     )
 
 
